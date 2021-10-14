@@ -1,0 +1,16 @@
+language: python
+python:
+  - "3.9"
+before_install:
+  - cd App
+install:
+  - pip install -r requirements.txt
+# command to run tests
+script:
+  - pytest --pylint
+#  - python -m  unittest discover -s  Tests
+
+branches:
+  only:
+    - master
+    - development
