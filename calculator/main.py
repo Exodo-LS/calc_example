@@ -32,7 +32,9 @@ class Calculator:
     def division(self, u_value):
         """This function performs division"""
         try:
+            # This Checks For A Divide By Zero Error
             self.answer = self.answer / u_value
         except ZeroDivisionError:
+            # Will Set answer To 0
             self.answer = 0
         return self.answer
