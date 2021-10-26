@@ -1,38 +1,32 @@
-"""Content of calculator.py#"""
-
-
-def inc(x_value):
-    """Increment function adds 1 to the x_value"""
-    return x_value + 1
-
+"""Content of calc.py"""
+from calculator.operations.addition import Addition
+from calculator.operations.subtraction import Subtraction
+from calculator.operations.multiplication import Multiplication
+from calculator.operations.division import Division
 
 class Calculator:
     """This will be the defined Calculator class"""
-    output = 0
 
-    def get_output(self):
-        """Returns the current value of the Calculator"""
-        return self.output
-
-    def addition(self, input_value1, input_value2):
+    @staticmethod
+    def addition(value_a, value_b):
         """This function performs addition"""
-        self.output = input_value1 + input_value2
-        return self.output
+        return Addition.add(value_a,value_b)
 
-    def subtraction(self, input_value1, input_value2):
+    @staticmethod
+    def subtraction(value_a, value_b):
         """This function performs subtraction"""
-        self.output = input_value1 - input_value2
-        return self.output
+        return Subtraction.subtract(value_a,value_b)
 
-    def multiplication(self, input_value1, input_value2):
+    @staticmethod
+    def multiplication(value_a, value_b):
         """This function performs multiplication"""
-        self.output = input_value1 * input_value2
-        return self.output
+        return Multiplication.multiply(value_a, value_b)
 
-    def division(self, input_value1, input_value2):
+    @staticmethod
+    def division(value_a, value_b):
         """This function does division"""
         try:
-            self.output = input_value1 / input_value2
+            output = Division.divide(value_a,value_b)
         except ZeroDivisionError:
-            self.output = 0
-        return self.output
+            output = 0
+        return output
