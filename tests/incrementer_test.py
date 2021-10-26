@@ -1,5 +1,5 @@
 """Testing The Increment Functions of the Calculator"""
-from calculator.main import inc
+from calculator.calc import inc
 
 
 def test_answer():
