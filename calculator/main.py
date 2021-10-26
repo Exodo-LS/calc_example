@@ -8,33 +8,31 @@ def inc(x_value):
 
 class Calculator:
     """This will be the defined Calculator class"""
-    answer = 2
+    output = 3
 
-    def get_answer(self):
+    def get_output(self):
         """Returns the current value of the Calculator"""
-        return self.answer
+        return self.output
 
-    def addition(self, u_value):
+    def addition(self, input_value):
         """This function performs addition"""
-        self.answer = self.answer + u_value
-        return self.answer
+        self.output += input_value
+        return self.output
 
-    def subtraction(self, u_value):
+    def subtraction(self, input_value):
         """This function performs subtraction"""
-        self.answer = self.answer - u_value
-        return self.answer
+        self.output -= input_value
+        return self.output
 
-    def multiplication(self, u_value):
+    def multiplication(self, input_value):
         """This function performs multiplication"""
-        self.answer = self.answer * u_value
-        return self.answer
+        self.output *= input_value
+        return self.output
 
-    def division(self, u_value):
-        """This function performs division"""
+    def division(self, input_value):
+        """This function does division"""
         try:
-            # This Checks For A Divide By Zero Error
-            self.answer = self.answer / u_value
+            self.output /= input_value
         except ZeroDivisionError:
-            # Will Set answer To 0
-            self.answer = 0
-        return self.answer
+            self.output = 0
+        return self.output
